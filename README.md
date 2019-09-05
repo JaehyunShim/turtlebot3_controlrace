@@ -1,42 +1,46 @@
-# Turtlebot3 Control Race!!!!!!
+# Turtlebot3 Control Race (a.k.a. gazebo playground!!!!!)
 
 ## Usage
+- Control TB3 on Gazebo with Teleop Keyboard and Run to the Goal Point in 2 min. 
 
 ### Install ROS 2 Dashing
 ```sh
 $ sudo apt update && sudo apt upgrade
-$ wget https://raw.githubusercontent.com/rjshim/yolo_test/master/install_ros_kinetic.sh && chmod 755 ./install_ros_kinetic.sh && bash ./install_ros_kinetic.sh
+$ wget https://raw.githubusercontent.com/rjshim/turtlebot3_controlrace/master/install_ros_dashing.sh?token=AJGY62JYSEDMLJB6L5LEIQ25OB5AS && chmod 755 ./install_ros_dashing.sh && bash ./install_ros_dashing.sh
 ```
 ### Install ROS packages and Build
 ```sh
-(Move to your workspace)
+(Move to colcon workspace)
 $ cd ~/robotis_ws/src/
 
 (Download packages)
-$ git clone https://github.com/rjshim/yolo_test.git
-$ git clone https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+$ git clone https://github.com/rjshim/turtlebot3_controlrace.git
 
-(Install binary packages)
-$ sudo apt-get install ros-kinetic-uvc-camera
-$ sudo apt-get install ros-kinetic-sound-play
-$ sudo apt-get install ros-kinetic-darknet-ros-msgs
+(Install relevant packages)
+http://emanual.robotis.com/docs/en/platform/turtlebot3/ros2/#pc-setup
 
 (Build)
-$ cd ~/catkin_ws && catkin_make
+$ cd ~/robotis_ws && colcon build --symlink-install
 ```
 
 ### Execute ROS packages
 ```sh
-(uvc camera)
-$ rosrun uvc_camera uvc_camera_node /image_raw:=/camera/image_raw
+(Set Gazebo Model and Plugin paths)
+$ export GAZEBO_MODEL_PATH=$HOME/robotis_ws/src/turtlebot3_controlrace/models
+$ export GAZEBO_PLUGIN_PATH=$HOME/robotis_ws/src/turtlebot3_controlrace/models/turtlebot3_controlrace/turtlebot3_controlrace_plugin/build
 
-(robot controller)
-$ rosrun robot_controller robot_controller
+(Gazebo with a virtual TB3)
+$ ros2 launch turtlebot3_controlrace turtlebot3_controlrace.launch.py
+
+(teleop keyboard)
+$ ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
 ## TODO
 - Set material for the custom Collada file (Can be done with Blender???).
 - Implement friction on the horizontally moving obstacle.
+- Display current time.
+- Implement the goal line + plugin.
 
 ## Reference
 - [DynamixelSDK](https://github.com/ROBOTIS-GIT/DynamixelSDK)
