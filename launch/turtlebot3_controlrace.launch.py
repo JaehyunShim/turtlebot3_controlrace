@@ -28,8 +28,8 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    world_file_name = 'turtlebot3_controlraces/' + 'burger' + '.model'
-    world = os.path.join(get_package_share_directory('turtlebot3_controlraces'), 'worlds', world_file_name)
+    world_file_name = 'turtlebot3_controlrace/' + 'burger' + '.model'
+    world = os.path.join(get_package_share_directory('turtlebot3_controlrace'), 'worlds', world_file_name)
     launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_bringup'), 'launch')
 
     return LaunchDescription([

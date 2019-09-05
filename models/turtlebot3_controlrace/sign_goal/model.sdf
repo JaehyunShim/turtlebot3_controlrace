@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="traffic_parking">
+  <model name="sign_goal">
     <static>true</static>
     <link name="box">
       <pose>0 0 0 0 0 0</pose>
@@ -19,9 +19,9 @@
         </geometry>
         <material>
           <script>
-            <uri>model://turtlebot3_controlrace/traffic_parking/materials/scripts</uri>
-            <uri>model://turtlebot3_controlrace/traffic_parking/materials/textures</uri>
-            <name>traffic_parking</name>
+            <uri>model://turtlebot3_controlrace/sign_goal/materials/scripts</uri>
+            <uri>model://turtlebot3_controlrace/sign_goal/materials/textures</uri>
+            <name>sign_goal</name>
           </script>
         </material>
       </visual>
