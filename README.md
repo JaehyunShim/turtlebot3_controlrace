@@ -43,4 +43,6 @@ $ ros2 run turtlebot3_teleop teleop_keyboard
 - Implement the goal line + plugin.
 
 ## Reference
-- [DynamixelSDK](https://github.com/ROBOTIS-GIT/DynamixelSDK)
+- [turtlebot3_ros2](https://github.com/ROBOTIS-GIT/turtlebot3/tree/ros2)
+- [turtlebot3_msgs_ros2](https://github.com/ROBOTIS-GIT/turtlebot3_msgs/tree/ros2)
+- [turtlebot3_simulations_ros2](https://github.com/ROBOTIS-GIT/turtlebot3_simulations/tree/ros2)
