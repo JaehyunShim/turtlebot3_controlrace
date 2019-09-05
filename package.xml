@@ -4,12 +4,12 @@
   <name>turtlebot3_controlrace</name>
   <version>2.0.0</version>
   <description>
-    Gazebo simulation package for the TurtleBot3
+    Gazebo simulation package for the TurtleBot3 Control Race!!!!!!!!
   </description>
   <license>Apache 2.0</license>
   <author email="jhshim@robotis.com">Ryan Shim</author>
   <maintainer email="jhshim@robotis.com">Ryan Shim</maintainer>
-  <url type="issue tracker">http://wiki.ros.org/turtlebot3_gazebo</url>
+  <url type="issue tracker">https://github.com/rjshim/turtlebot3_controlrace/issues</url>
   <buildtool_depend>ament_cmake</buildtool_depend>
   <depend>rclcpp</depend>
   <depend>gazebo_ros_pkgs</depend>
